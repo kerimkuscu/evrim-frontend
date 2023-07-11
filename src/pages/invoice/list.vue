@@ -57,7 +57,7 @@ export default {
     },
 
     createInvoice() {
-      console.log('create')
+      this.$router.push({ name: 'invoice.create' });
     },
 
     editInvoice(item) {
