@@ -29,7 +29,7 @@ export default createRouter({
                 },
 
                 {
-                    path: 'edit/:id',
+                    path: 'edit/:invoice_id',
                     name: 'invoice.edit',
                     component: InvoiceForm,
                 },
