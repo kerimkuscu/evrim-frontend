@@ -2,7 +2,7 @@
   <table v-if="visibleColumns.length >= 1" id="example" class="display table table-striped table-hover" style="width:100%">
     <thead>
     <tr>
-      <th v-for="header in headers" :key="header.value" :class="getClassList" scope="col">
+      <th v-for="header in headers" :key="header.value" :class="getClassList" scope="col" :width="getWidth(header)">
         {{ header.text }}
       </th>
     </tr>
@@ -21,7 +21,7 @@
   </table>
 
   <div v-else class="alert alert-warning" role="alert">
-    No data found
+    {{ noData }}
   </div>
 </template>
 
@@ -54,8 +54,21 @@ export default {
     getCellClassList: {
       type: String,
       default: '',
+    },
+
+    noData: {
+      type: String,
+      default: 'No data found'
     }
   },
+
+  methods: {
+    getWidth(item) {
+      if (item.value === 'actions') {
+        return 75;
+      }
+    },
+  }
 }
 </script>
 

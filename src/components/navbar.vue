@@ -15,7 +15,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-4 mt-2">
           <li class="nav-item">
-            <router-link to="/invoice/list" class="nav-link"> Invoice </router-link>
+            <router-link to="/invoice/list" class="nav-link"> {{ $t('invoices.title') }} </router-link>
           </li>
         </ul>
       </div>
